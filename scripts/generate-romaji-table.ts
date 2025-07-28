@@ -147,9 +147,31 @@ async function main() {
     const frequencyMap = await buildFrequencyMap();
     const kanaData = createKanaFrequencyList(frequencyMap);
 
-    for (let i = 0; i < Math.min(keys.length, kanaData.length); i++) {
-      const key = keys[i];
-      const kana = kanaData[i];
+    // 固定配置
+    const fixedMapping = new Map<string, string>([
+      ["e", "、"],
+      ["i", "。"],
+    ]);
+
+    // 残りの文字（固定配置以外）
+    const remainingKana = kanaData.filter(
+      (item) => !["、", "。"].includes(item.char)
+    );
+    const remainingKeys = keys.filter((key) => !fixedMapping.has(key));
+
+    // 固定配置を出力
+    for (const [key, char] of fixedMapping) {
+      console.log(`${key}\t${char}`);
+    }
+
+    // 残りを頻度順に配置
+    for (
+      let i = 0;
+      i < Math.min(remainingKeys.length, remainingKana.length);
+      i++
+    ) {
+      const key = remainingKeys[i];
+      const kana = remainingKana[i];
       if (key && kana) {
         console.log(`${key}\t${kana.char}`);
       }
