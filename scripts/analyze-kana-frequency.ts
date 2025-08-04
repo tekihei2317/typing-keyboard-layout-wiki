@@ -25,7 +25,7 @@ async function parseXML(xmlContent: string): Promise<WordsData> {
 
 function extractKanaCharacters(text: string): string[] {
   // ひらがな・カタカナ・記号（句読点、長音）のみを抽出
-  return text.match(/[あ-んア-ンー、。]/g) || [];
+  return text.match(/[ぁ-んァ-ンー、。]/g) || [];
 }
 
 function countKanaFrequency(words: string[]): Map<string, number> {
