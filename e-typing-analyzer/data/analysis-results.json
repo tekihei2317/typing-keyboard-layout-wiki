@@ -1,0 +1,155 @@
+{
+  "wordCount": 82,
+  "averageRomanLength": 17.5609756097561,
+  "expectedTrialLength": 263.4146341463415,
+  "firstCharFrequency": {
+    "a": 2,
+    "i": 4,
+    "u": 1,
+    "o": 4,
+    "k": 9,
+    "g": 2,
+    "s": 9,
+    "t": 8,
+    "n": 8,
+    "h": 10,
+    "b": 1,
+    "p": 4,
+    "m": 8,
+    "y": 6,
+    "r": 5,
+    "w": 1
+  },
+  "firstCharPercentage": {
+    "a": 2.4390243902439024,
+    "i": 4.878048780487805,
+    "u": 1.2195121951219512,
+    "o": 4.878048780487805,
+    "k": 10.975609756097562,
+    "g": 2.4390243902439024,
+    "s": 10.975609756097562,
+    "t": 9.75609756097561,
+    "n": 9.75609756097561,
+    "h": 12.195121951219512,
+    "b": 1.2195121951219512,
+    "p": 4.878048780487805,
+    "m": 9.75609756097561,
+    "y": 7.317073170731707,
+    "r": 6.097560975609756,
+    "w": 1.2195121951219512
+  },
+  "keyboardData": [
+    {
+      "key": "h",
+      "percentage": 12.195121951219512,
+      "row": 2,
+      "col": 5,
+      "finger": "right-index"
+    },
+    {
+      "key": "k",
+      "percentage": 10.975609756097562,
+      "row": 2,
+      "col": 7,
+      "finger": "right-middle"
+    },
+    {
+      "key": "s",
+      "percentage": 10.975609756097562,
+      "row": 2,
+      "col": 1,
+      "finger": "left-ring"
+    },
+    {
+      "key": "t",
+      "percentage": 9.75609756097561,
+      "row": 1,
+      "col": 4,
+      "finger": "left-index"
+    },
+    {
+      "key": "n",
+      "percentage": 9.75609756097561,
+      "row": 3,
+      "col": 5,
+      "finger": "right-index"
+    },
+    {
+      "key": "m",
+      "percentage": 9.75609756097561,
+      "row": 3,
+      "col": 6,
+      "finger": "right-index"
+    },
+    {
+      "key": "y",
+      "percentage": 7.317073170731707,
+      "row": 1,
+      "col": 5,
+      "finger": "right-index"
+    },
+    {
+      "key": "r",
+      "percentage": 6.097560975609756,
+      "row": 1,
+      "col": 3,
+      "finger": "left-index"
+    },
+    {
+      "key": "i",
+      "percentage": 4.878048780487805,
+      "row": 1,
+      "col": 7,
+      "finger": "right-middle"
+    },
+    {
+      "key": "o",
+      "percentage": 4.878048780487805,
+      "row": 1,
+      "col": 8,
+      "finger": "right-ring"
+    },
+    {
+      "key": "p",
+      "percentage": 4.878048780487805,
+      "row": 1,
+      "col": 9,
+      "finger": "right-pinky"
+    },
+    {
+      "key": "a",
+      "percentage": 2.4390243902439024,
+      "row": 2,
+      "col": 0,
+      "finger": "left-pinky"
+    },
+    {
+      "key": "g",
+      "percentage": 2.4390243902439024,
+      "row": 2,
+      "col": 4,
+      "finger": "left-index"
+    },
+    {
+      "key": "u",
+      "percentage": 1.2195121951219512,
+      "row": 1,
+      "col": 6,
+      "finger": "right-index"
+    },
+    {
+      "key": "b",
+      "percentage": 1.2195121951219512,
+      "row": 3,
+      "col": 4,
+      "finger": "left-index"
+    },
+    {
+      "key": "w",
+      "percentage": 1.2195121951219512,
+      "row": 1,
+      "col": 1,
+      "finger": "left-ring"
+    }
+  ]
+}
