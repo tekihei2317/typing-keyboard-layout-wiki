@@ -10,166 +10,130 @@
           sans-serif;
         margin: 0;
         padding: 20px;
-        background: #f5f5f5;
+        background: #fafafa;
+        color: #333;
       }
 
       .container {
-        max-width: 1200px;
+        max-width: 800px;
         margin: 0 auto;
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
 
       h1 {
-        color: #333;
-        text-align: center;
-        margin-bottom: 30px;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
       }
 
-      .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      .stats {
+        display: flex;
         gap: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        font-size: 0.9rem;
       }
 
-      .stat-card {
-        background: #f8f9fa;
-        padding: 20px;
-        border-radius: 8px;
-        text-align: center;
-        border-left: 4px solid #007bff;
+      .stat {
+        color: #666;
       }
 
       .stat-value {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #007bff;
-      }
-
-      .stat-label {
-        color: #666;
-        margin-top: 8px;
-      }
-
-      .keyboard-section {
-        margin-top: 40px;
-      }
-
-      .keyboard-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-weight: 600;
         color: #333;
-      }
-
-      .keyboard {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        gap: 4px;
-        max-width: 600px;
-        margin: 0 auto;
-        background: #333;
-        padding: 20px;
-        border-radius: 10px;
-      }
-
-      .key {
-        aspect-ratio: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #666;
-        color: white;
-        border-radius: 4px;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .key.active {
-        background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      .key-percentage {
-        position: absolute;
-        bottom: 2px;
-        right: 2px;
-        font-size: 0.6rem;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 1px 3px;
-        border-radius: 2px;
-      }
-
-      .row-1 {
-        grid-row: 1;
-      }
-      .row-2 {
-        grid-row: 2;
-      }
-      .row-3 {
-        grid-row: 3;
-      }
-
-      .loading {
-        text-align: center;
-        padding: 40px;
-        color: #666;
       }
 
       .error {
         background: #fee;
         color: #c33;
-        padding: 20px;
-        border-radius: 8px;
-        border-left: 4px solid #c33;
-        margin: 20px 0;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
       }
 
-      .file-selector {
-        margin-bottom: 30px;
-        text-align: center;
+      .keyboard-title {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        font-weight: 500;
       }
 
-      .file-selector select {
-        padding: 10px 20px;
+      .keyboard {
+        display: grid;
+        gap: 4px;
+        max-width: 975px;
+        margin: 0 auto;
+        font-family: monospace;
+      }
+
+      /* Row staggered layout */
+      .keyboard-row {
+        display: flex;
+        gap: 4px;
+      }
+
+      .keyboard-row:nth-child(1) {
+        margin-left: 0;
+      }
+
+      .keyboard-row:nth-child(2) {
+        margin-left: 15px; /* 1/4 key width stagger */
+      }
+
+      .keyboard-row:nth-child(3) {
+        margin-left: 45px; /* 1/2 key width stagger */
+      }
+
+      .key {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e8e8e8;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
         font-size: 1rem;
-        border: 2px solid #ddd;
-        border-radius: 6px;
-        background: white;
+      }
+
+      .key.active {
+        background: #4a90e2;
+        color: white;
+        border-color: #357abd;
+      }
+
+      .key-percentage {
+        position: absolute;
+        bottom: 2px;
+        right: 3px;
+        font-size: 0.7rem;
+        opacity: 0.8;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>E-typing Word Analysis</h1>
+      <h2>夏のおやつ</h2>
 
       <div id="error" class="error" style="display: none"></div>
 
       <div id="results" style="display: none">
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value" id="word-count">-</div>
-            <div class="stat-label">総ワード数</div>
+        <div class="stats">
+          <div class="stat">
+            ワード数: <span class="stat-value" id="word-count">-</span>
           </div>
-          <div class="stat-card">
-            <div class="stat-value" id="avg-length">-</div>
-            <div class="stat-label">平均ローマ字文字数</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="trial-length">-</div>
-            <div class="stat-label">1トライアル期待文字数<br />(15ワード)</div>
+          <div class="stat">
+            平均文字数:
+            <span class="stat-value" id="trial-length">-</span>
           </div>
         </div>
 
         <div class="keyboard-section">
           <h2 class="keyboard-title">最初の文字の出現頻度</h2>
-          <div class="keyboard" id="keyboard"></div>
+          <div class="keyboard" id="keyboard">
+            <div class="keyboard-row" data-row="0"></div>
+            <div class="keyboard-row" data-row="1"></div>
+            <div class="keyboard-row" data-row="2"></div>
+          </div>
         </div>
       </div>
     </div>

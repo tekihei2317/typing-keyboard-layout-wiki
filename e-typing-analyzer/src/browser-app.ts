@@ -30,7 +30,11 @@ async function loadAnalysis(): Promise<void> {
     const analysis: AnalysisResult = await response.json();
     displayResults(analysis);
   } catch (error) {
-    displayError(`読み込みエラー: ${error instanceof Error ? error.message : String(error)}`);
+    displayError(
+      `読み込みエラー: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    );
   }
 }
 
@@ -46,27 +50,37 @@ function displayResults(analysis: AnalysisResult): void {
   const wordCountEl = document.getElementById("word-count");
   const avgLengthEl = document.getElementById("avg-length");
   const trialLengthEl = document.getElementById("trial-length");
-  
+
   if (wordCountEl) wordCountEl.textContent = analysis.wordCount.toString();
-  if (avgLengthEl) avgLengthEl.textContent = analysis.averageRomanLength.toFixed(1);
-  if (trialLengthEl) trialLengthEl.textContent = analysis.expectedTrialLength.toFixed(1);
+  if (avgLengthEl)
+    avgLengthEl.textContent = analysis.averageRomanLength.toFixed(1);
+  if (trialLengthEl)
+    trialLengthEl.textContent = analysis.expectedTrialLength.toFixed(1);
 
   const keyboardDiv = document.getElementById("keyboard");
   if (!keyboardDiv) return;
-  
-  keyboardDiv.innerHTML = "";
+
+  // Clear existing keys but keep row structure
+  const rows = keyboardDiv.querySelectorAll(".keyboard-row");
+  rows.forEach((row) => (row.innerHTML = ""));
 
   const keyDataMap = new Map(
     analysis.keyboardData.map((item) => [item.key, item])
   );
 
   qwertyKeys.forEach((row, rowIndex) => {
-    row.forEach((key, colIndex) => {
+    const rowElement = keyboardDiv.querySelector(
+      `[data-row="${rowIndex}"]`
+    ) as HTMLElement;
+    if (!rowElement) {
+      console.error(`Row element not found for row ${rowIndex}`);
+      return;
+    }
+
+    row.forEach((key) => {
       const keyElement = document.createElement("div");
-      keyElement.className = `key row-${rowIndex + 1}`;
+      keyElement.className = "key";
       keyElement.textContent = key.toUpperCase();
-      keyElement.style.gridColumn = `${colIndex + 1}`;
-      keyElement.style.gridRow = `${rowIndex + 1}`;
 
       const keyData = keyDataMap.get(key);
       if (keyData && keyData.percentage > 0) {
@@ -80,11 +94,18 @@ function displayResults(analysis: AnalysisResult): void {
         const maxPercentage = Math.max(
           ...analysis.keyboardData.map((d) => d.percentage)
         );
-        const opacity = 0.3 + (keyData.percentage / maxPercentage) * 0.7;
-        keyElement.style.opacity = opacity.toString();
+        const intensity = keyData.percentage / maxPercentage;
+
+        // Use HSL color with much wider contrast range
+        // Blue hue (220°), dramatic variation in saturation and lightness
+        const saturation = 40 + intensity * 60; // 40% to 100% (wider range)
+        const lightness = 85 - intensity * 60; // 85% to 25% (much wider range)
+
+        keyElement.style.backgroundColor = `hsl(220, ${saturation}%, ${lightness}%)`;
+        keyElement.style.color = intensity > 0.4 ? "white" : "#333";
       }
 
-      keyboardDiv.appendChild(keyElement);
+      rowElement.appendChild(keyElement);
     });
   });
 
