@@ -35,7 +35,7 @@ const kanaToRoman: Record<string, string> = {
   の: "no",
   は: "ha",
   ひ: "hi",
-  ふ: "hu",
+  ふ: "fu",
   へ: "he",
   ほ: "ho",
   ま: "ma",
