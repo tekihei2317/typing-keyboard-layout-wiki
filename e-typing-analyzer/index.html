@@ -24,11 +24,19 @@
         margin-bottom: 20px;
       }
 
+      h2 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        margin-top: 30px;
+        font-weight: bold;
+        color: #333;
+      }
+
       .stats {
         display: flex;
-        gap: 20px;
+        gap: 30px;
         margin-bottom: 30px;
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
 
       .stat {
@@ -36,8 +44,10 @@
       }
 
       .stat-value {
-        font-weight: 600;
+        font-weight: bold;
         color: #333;
+        font-size: 1.4rem;
+        margin-left: 8px;
       }
 
       .error {
@@ -46,12 +56,6 @@
         padding: 15px;
         border-radius: 4px;
         margin-bottom: 20px;
-      }
-
-      .keyboard-title {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-        font-weight: 500;
       }
 
       .keyboard {
@@ -112,7 +116,7 @@
   </head>
   <body>
     <div class="container">
-      <h2>夏のおやつ</h2>
+      <h1>夏のおやつ</h1>
 
       <div id="error" class="error" style="display: none"></div>
 
@@ -128,12 +132,19 @@
         </div>
 
         <div class="keyboard-section">
-          <h2 class="keyboard-title">最初の文字の出現頻度</h2>
+          <h2>最初の文字の出現頻度</h2>
           <div class="keyboard" id="keyboard">
             <div class="keyboard-row" data-row="0"></div>
             <div class="keyboard-row" data-row="1"></div>
             <div class="keyboard-row" data-row="2"></div>
           </div>
+        </div>
+
+        <div>
+          <h2>頻出単語</h2>
+          <p>
+            アイス(11)、冷たい(6)、かき氷(5)、凍らせた/凍らせて(5)、冷やし(3)、宇治金時(3)、ラムネ(3)、...
+          </p>
         </div>
       </div>
     </div>
