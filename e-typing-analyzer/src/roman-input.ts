@@ -90,6 +90,9 @@ const kanaToRoman: Record<string, string> = {
   "7": "7",
   "8": "8",
   "9": "9",
+  // 記号,
+  "、": ",",
+  "/": "/",
 };
 
 const youonMap: Record<string, string> = {
