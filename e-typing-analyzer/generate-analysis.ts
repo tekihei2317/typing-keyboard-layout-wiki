@@ -6,7 +6,7 @@ import {
 async function generateAnalysis() {
   try {
     const analysis = await loadAndAnalyzeWords(
-      "../words/e-typing/ことわざ.xml"
+      "../words/e-typing/顔の慣用句.xml"
     );
     const keyboardData = getKeyboardVisualizationData(analysis);
 
