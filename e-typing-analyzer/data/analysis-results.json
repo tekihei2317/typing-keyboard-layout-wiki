@@ -1,191 +1,177 @@
 {
-  "wordCount": 184,
-  "averageRomanLength": 26.347826086956523,
-  "expectedTrialLength": 395.21739130434787,
+  "wordCount": 216,
+  "averageRomanLength": 19.86574074074074,
+  "expectedTrialLength": 297.9861111111111,
   "firstCharFrequency": {
-    "a": 14,
-    "i": 4,
-    "u": 3,
-    "e": 1,
-    "o": 12,
-    "k": 54,
-    "g": 3,
-    "s": 18,
-    "z": 1,
+    "1": 2,
+    "3": 1,
+    "a": 2,
+    "i": 28,
+    "u": 2,
+    "o": 5,
+    "k": 18,
+    "g": 6,
+    "s": 50,
+    "z": 3,
     "j": 1,
-    "t": 14,
-    "d": 3,
-    "n": 8,
-    "h": 17,
-    "b": 1,
-    "f": 2,
-    "m": 16,
-    "y": 7,
-    "r": 1,
-    "w": 4
+    "t": 17,
+    "d": 5,
+    "n": 16,
+    "h": 26,
+    "b": 9,
+    "f": 3,
+    "m": 12,
+    "y": 8,
+    "r": 2
   },
   "firstCharPercentage": {
-    "a": 7.608695652173914,
-    "i": 2.1739130434782608,
-    "u": 1.6304347826086956,
-    "e": 0.5434782608695652,
-    "o": 6.521739130434782,
-    "k": 29.347826086956523,
-    "g": 1.6304347826086956,
-    "s": 9.782608695652174,
-    "z": 0.5434782608695652,
-    "j": 0.5434782608695652,
-    "t": 7.608695652173914,
-    "d": 1.6304347826086956,
-    "n": 4.3478260869565215,
-    "h": 9.239130434782608,
-    "b": 0.5434782608695652,
-    "f": 1.0869565217391304,
-    "m": 8.695652173913043,
-    "y": 3.804347826086957,
-    "r": 0.5434782608695652,
-    "w": 2.1739130434782608
+    "1": 0.9259259259259258,
+    "3": 0.4629629629629629,
+    "a": 0.9259259259259258,
+    "i": 12.962962962962962,
+    "u": 0.9259259259259258,
+    "o": 2.314814814814815,
+    "k": 8.333333333333332,
+    "g": 2.7777777777777777,
+    "s": 23.14814814814815,
+    "z": 1.3888888888888888,
+    "j": 0.4629629629629629,
+    "t": 7.87037037037037,
+    "d": 2.314814814814815,
+    "n": 7.4074074074074066,
+    "h": 12.037037037037036,
+    "b": 4.166666666666666,
+    "f": 1.3888888888888888,
+    "m": 5.555555555555555,
+    "y": 3.7037037037037033,
+    "r": 0.9259259259259258
   },
   "keyboardData": [
     {
-      "key": "k",
-      "percentage": 29.347826086956523,
-      "row": 2,
-      "col": 7,
-      "finger": "right-middle"
-    },
-    {
       "key": "s",
-      "percentage": 9.782608695652174,
+      "percentage": 23.14814814814815,
       "row": 2,
       "col": 1,
       "finger": "left-ring"
     },
     {
+      "key": "i",
+      "percentage": 12.962962962962962,
+      "row": 1,
+      "col": 7,
+      "finger": "right-middle"
+    },
+    {
       "key": "h",
-      "percentage": 9.239130434782608,
+      "percentage": 12.037037037037036,
       "row": 2,
+      "col": 5,
+      "finger": "right-index"
+    },
+    {
+      "key": "k",
+      "percentage": 8.333333333333332,
+      "row": 2,
+      "col": 7,
+      "finger": "right-middle"
+    },
+    {
+      "key": "t",
+      "percentage": 7.87037037037037,
+      "row": 1,
+      "col": 4,
+      "finger": "left-index"
+    },
+    {
+      "key": "n",
+      "percentage": 7.4074074074074066,
+      "row": 3,
       "col": 5,
       "finger": "right-index"
     },
     {
       "key": "m",
-      "percentage": 8.695652173913043,
+      "percentage": 5.555555555555555,
       "row": 3,
-      "col": 6,
-      "finger": "right-index"
-    },
-    {
-      "key": "a",
-      "percentage": 7.608695652173914,
-      "row": 2,
-      "col": 0,
-      "finger": "left-pinky"
-    },
-    {
-      "key": "t",
-      "percentage": 7.608695652173914,
-      "row": 1,
-      "col": 4,
-      "finger": "left-index"
-    },
-    {
-      "key": "o",
-      "percentage": 6.521739130434782,
-      "row": 1,
-      "col": 8,
-      "finger": "right-ring"
-    },
-    {
-      "key": "n",
-      "percentage": 4.3478260869565215,
-      "row": 3,
-      "col": 5,
-      "finger": "right-index"
-    },
-    {
-      "key": "y",
-      "percentage": 3.804347826086957,
-      "row": 1,
-      "col": 5,
-      "finger": "right-index"
-    },
-    {
-      "key": "i",
-      "percentage": 2.1739130434782608,
-      "row": 1,
-      "col": 7,
-      "finger": "right-middle"
-    },
-    {
-      "key": "w",
-      "percentage": 2.1739130434782608,
-      "row": 1,
-      "col": 1,
-      "finger": "left-ring"
-    },
-    {
-      "key": "u",
-      "percentage": 1.6304347826086956,
-      "row": 1,
-      "col": 6,
-      "finger": "right-index"
-    },
-    {
-      "key": "g",
-      "percentage": 1.6304347826086956,
-      "row": 2,
-      "col": 4,
-      "finger": "left-index"
-    },
-    {
-      "key": "d",
-      "percentage": 1.6304347826086956,
-      "row": 2,
-      "col": 2,
-      "finger": "left-middle"
-    },
-    {
-      "key": "f",
-      "percentage": 1.0869565217391304,
-      "row": 2,
-      "col": 3,
-      "finger": "left-index"
-    },
-    {
-      "key": "e",
-      "percentage": 0.5434782608695652,
-      "row": 1,
-      "col": 2,
-      "finger": "left-middle"
-    },
-    {
-      "key": "z",
-      "percentage": 0.5434782608695652,
-      "row": 3,
-      "col": 0,
-      "finger": "left-pinky"
-    },
-    {
-      "key": "j",
-      "percentage": 0.5434782608695652,
-      "row": 2,
       "col": 6,
       "finger": "right-index"
     },
     {
       "key": "b",
-      "percentage": 0.5434782608695652,
+      "percentage": 4.166666666666666,
       "row": 3,
       "col": 4,
       "finger": "left-index"
     },
     {
+      "key": "y",
+      "percentage": 3.7037037037037033,
+      "row": 1,
+      "col": 5,
+      "finger": "right-index"
+    },
+    {
+      "key": "g",
+      "percentage": 2.7777777777777777,
+      "row": 2,
+      "col": 4,
+      "finger": "left-index"
+    },
+    {
+      "key": "o",
+      "percentage": 2.314814814814815,
+      "row": 1,
+      "col": 8,
+      "finger": "right-ring"
+    },
+    {
+      "key": "d",
+      "percentage": 2.314814814814815,
+      "row": 2,
+      "col": 2,
+      "finger": "left-middle"
+    },
+    {
+      "key": "z",
+      "percentage": 1.3888888888888888,
+      "row": 3,
+      "col": 0,
+      "finger": "left-pinky"
+    },
+    {
+      "key": "f",
+      "percentage": 1.3888888888888888,
+      "row": 2,
+      "col": 3,
+      "finger": "left-index"
+    },
+    {
+      "key": "a",
+      "percentage": 0.9259259259259258,
+      "row": 2,
+      "col": 0,
+      "finger": "left-pinky"
+    },
+    {
+      "key": "u",
+      "percentage": 0.9259259259259258,
+      "row": 1,
+      "col": 6,
+      "finger": "right-index"
+    },
+    {
       "key": "r",
-      "percentage": 0.5434782608695652,
+      "percentage": 0.9259259259259258,
       "row": 1,
       "col": 3,
       "finger": "left-index"
+    },
+    {
+      "key": "j",
+      "percentage": 0.4629629629629629,
+      "row": 2,
+      "col": 6,
+      "finger": "right-index"
     }
   ]
 }
